@@ -54,3 +54,7 @@ shell是用来执行具体更新命令
 **最后**
 
 最后根据需要可以设定定时任务，每天执行一次实时监控。
+每天凌晨3:25执行脚本，检测是否需要更新，并将日志打印到auto.log中
+```
+25 3 * * * python3 /root/autoUpdateHalo/updateHalo.py >> /root/autoUpdateHalo/auto.log
+```
