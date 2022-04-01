@@ -4,7 +4,7 @@
 
 1、需要有python3环境（python2.7应该不行）
 
-2、需要和官网的Linux部署一样就可以用，如果不同或者使用docker可以自己修改
+2、**需要和官网的部署一样就可以用**，如果有不同命令可以简单修改
 
 **准备：**
 
@@ -19,7 +19,7 @@ pip3 install -r requirement.txt
 ```
 chmod 777 test.py
 chmod 777 updateHalo.py
-chmod 777 updateHalo.sh
+chmod 777 updateHaloLinux.sh
 ```
 
 3、将updateHalo.py和test.py代码中的MYURL替换为自己的博客主页地址，例：`myResponse = requests.get(url='https://xxxx')`
