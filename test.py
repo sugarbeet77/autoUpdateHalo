@@ -8,7 +8,8 @@ def getVersion():
         response = requests.get(url='https://docs.halo.run/')
         bs = BeautifulSoup(response.text, "html.parser")
         #获取最近版本
-        newVersion = bs.find_all(name='a', attrs={'class': 'navbar__link'})[2].get_text()
+        newVersionText = bs.find_all(name='meta', attrs={'name': 'generator'})[0]['content']
+        newVersion = str(newVersionText).split(' ')[1]
         print('最新版本:\t'+newVersion)
     except:
         print('获取最新版本失败！')
