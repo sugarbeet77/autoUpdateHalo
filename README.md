@@ -22,9 +22,9 @@ chmod 777 updateHalo.py
 chmod 777 updateHalo.sh
 ```
 
-3、将updateHalo.py和test.py代码中的MYURL替换为自己的blog主页地址，例：`myResponse = requests.get(url='https://xxxx')`
+3、将updateHalo.py和test.py代码中的MYURL替换为自己的博客主页地址，例：`myResponse = requests.get(url='https://xxxx')`
 
-我提供了test.py，可以先运行test.py，如果能正常返回，自己和最新版本、需要更新或已是最新版本就说明正常。
+这里提供了test.py，可以先运行test.py，如果能正常返回，自己和最新版本、需要更新或已是最新版本就说明正常，可以直接使用。
 
 ```
  #获取自己当前版本
