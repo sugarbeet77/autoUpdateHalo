@@ -14,7 +14,6 @@ function stop_f () {
 }
 
 
-
 function bak_f1 () {
     echo -e "正在备份halo配置文件..."
     bakfile1=`cp -r /home/halo/.halo /home/halo/.halo.archive`
