@@ -19,7 +19,7 @@ pip3 install -r requirement.txt
 ```
 chmod 777 test.py
 chmod 777 updateHalo.py
-chmod 777 updateHaloLinux.sh
+chmod 777 updateHaloLinux.sh或chmod 777 updateHaloDocker.sh
 ```
 
 3、将updateHalo.py和test.py代码中的MYURL替换为自己的博客主页地址，例：`myResponse = requests.get(url='https://xxxx')`
