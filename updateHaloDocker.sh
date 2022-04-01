@@ -48,7 +48,7 @@ function download_f () {
 
 function start_f () {
     echo -e "正在创建容器..."
-    start=`docker run -it -d --name halo -p 8090:8090 -v ~/.halo:/root/.halo --restart=unless-stopped halohub/halo:$NEWVERSION`
+    start=`docker run -it -d --name halo -p 8090:8090 -v /home/halo/.halo:/root/.halo --restart=unless-stopped halohub/halo:$NEWVERSION`
     if [ $? -eq 0 ]; then
        echo -e "\e[32m 创建成功！\e[0m"
        else
