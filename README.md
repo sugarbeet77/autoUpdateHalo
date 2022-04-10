@@ -27,7 +27,7 @@ chmod 777 updateHaloLinux.sh或chmod 777 updateHaloDocker.sh
  #获取自己当前版本
     myResponse = requests.get(url=MYURL)
 ```
-根据实际需求使用linux或docker的shell脚本，`os.system('./updateHaloLinux.sh '+newVersion)`，更改python文件中的文件名即可（**注意：文件名后面有一个空格**）。
+根据实际需求使用linux或docker的shell脚本，`os.system('cd /home/halo/autoUpdateHalo && ./updateHaloLinux.sh '+newVersion)`，更改python文件中的shell文件名即可（**注意：shell文件名后面有一个空格**）。
 
 这里提供了test.py，可以先运行test.py，如果能正常返回，自己和最新版本、需要更新或已是最新版本就说明正常，可以直接使用。
 
@@ -57,5 +57,5 @@ shell是用来执行具体更新命令
 
 ```
 #每天凌晨3:25执行脚本，检测是否需要更新，并将日志打印到auto.log中
-25 3 * * * python3 /root/autoUpdateHalo/updateHalo.py >> /root/autoUpdateHalo/auto.log
+25 3 * * * root python3 /home/halo/autoUpdateHalo/updateHalo.py 2> /home/halo/autoUpdateHalo/auto.log
 ```
