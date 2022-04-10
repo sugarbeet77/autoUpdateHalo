@@ -26,7 +26,7 @@ def getVersion():
         exit()
 
     if oldVersion != newVersion:
-        os.system('./updateHaloLinux.sh '+newVersion)
+        os.system('cd /root/autoUpdateHalo/ && ./updateHaloLinux.sh '+newVersion)
     else:
         print('已是最新版本')
 
