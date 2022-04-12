@@ -17,6 +17,8 @@ def getVersion():
 
     try:
         #获取自己当前版本
+        #示例
+        #myResponse = requests.get(url='https://blog.sugarbeet.cn')
         myResponse = requests.get(url='MYURL')
         bs = BeautifulSoup(myResponse.text, "html.parser")
         myVersion = bs.find_all(name='meta', attrs={'name': 'generator'})[0]['content']
