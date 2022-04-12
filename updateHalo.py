@@ -17,6 +17,8 @@ def getVersion():
 
     try:
         #获取自己当前版本
+        #示例
+        #myResponse = requests.get(url='https://blog.sugarbeet.cn')
         myResponse = requests.get(url='MYURL')
         bs = BeautifulSoup(myResponse.text, "html.parser")
         myVersion = bs.find_all(name='meta', attrs={'name': 'generator'})[0]['content']
@@ -26,6 +28,7 @@ def getVersion():
         exit()
 
     if oldVersion != newVersion:
+        #放置脚本的路径
         os.system('cd /home/halo/autoUpdateHalo && ./updateHaloLinux.sh '+newVersion)
     else:
         print('已是最新版本')
